@@ -56,14 +56,14 @@ export function LandingPage() {
               <LanguageSwitcher />
               <ThemeSwitcher />
               <Link
-                to="https://app.fishtracker/auth/signin"
+                to="https://app.fishtracker.pt/auth/signin"
                 className="inline-flex items-center px-4 py-2 text-primary hover:text-primary-light dark:text-white dark:hover:text-primary-light transition-colors"
               >
                 <LogIn className="w-4 h-4 mr-2" />
                 {t("landing.hero.signIn")}
               </Link>
               <Link
-                to="https://app.fishtracker/auth/signup"
+                to="https://app.fishtracker.pt/auth/signup"
                 className="inline-flex items-center px-4 py-2 bg-primary hover:bg-primary-light text-white rounded-lg transition-colors"
               >
                 <UserPlus className="w-4 h-4 mr-2" />
