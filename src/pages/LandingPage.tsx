@@ -86,13 +86,13 @@ export function LandingPage() {
             </p>
             <div className="flex justify-center gap-4">
               <Link
-                to="/register"
+                to="https://app.fishtracker.pt/auth/signup"
                 className="px-8 py-3 bg-white text-primary hover:bg-gray-100 rounded-lg transition-colors"
               >
                 {t("landing.hero.getStarted")}
               </Link>
               <Link
-                to="/login"
+                to="https://app.fishtracker.pt/auth/signin"
                 className="px-8 py-3 bg-primary-light hover:bg-primary text-white rounded-lg transition-colors"
               >
                 {t("landing.hero.signIn")}
