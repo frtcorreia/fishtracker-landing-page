@@ -1,0 +1,35 @@
+{ 
+  "appName": "FishTracker",
+  "landing": {
+    "hero": {
+      "title": "Registe as Suas Aventuras de Pesca",
+      "subtitle": "Registe capturas, analise padrões e torne-se um pescador melhor",
+      "getStarted": "Começar Agora",
+      "signIn": "Entrar"
+    },
+    "features": {
+      "title": "Funcionalidades",
+      "trackCatches": {
+        "title": "Registe as Suas Capturas",
+        "description": "Registe informações detalhadas sobre cada captura, incluindo espécie, peso, localização, entre outros dados..."
+      },
+      "analytics": {
+        "title": "Análises Detalhadas",
+        "description": "Analise seus padrões de pesca e melhore sua taxa de sucesso"
+      },
+      "share": {
+        "title": "Partilhe os Seus Sucessos",
+        "description": "Partilhe as suas capturas com os seus amigos"
+      },
+      "weather": {
+        "title": "Integração com Clima",
+        "description": "Obtenha dados meteorológicos em tempo real e fases da lua para melhor planeamento"
+      }
+    },
+    "cta": {
+      "title": "Pronto para Começar a Registar?",
+      "subtitle": "Preparado para começar a melhorar os seus dias de pesca?",
+      "button": "Criar Conta Gratuita"
+    }
+  } 
+}

@@ -1,0 +1,35 @@
+{  
+  "appName": "FishTracker",
+  "landing": {
+    "hero": {
+      "title": "Track Your Fishing Adventures",
+      "subtitle": "Record catches, analyze patterns, and become a better angler",
+      "getStarted": "Get Started",
+      "signIn": "Sign In"
+    },
+    "features": {
+      "title": "Features",
+      "trackCatches": {
+        "title": "Track Your Catches",
+        "description": "Record detailed information about each catch, including species, weight, location, and others..."
+      },
+      "analytics": {
+        "title": "Detailed Analytics",
+        "description": "Analyze your fishing patterns and improve your success rate"
+      },
+      "share": {
+        "title": "Share Your Success",
+        "description": "Share your catches with friends"
+      },
+      "weather": {
+        "title": "Weather Integration",
+        "description": "Get real-time weather data and moon phases for better planning"
+      }
+    },
+    "cta": {
+      "title": "Ready to Start Tracking?",
+      "subtitle": "Ready to start improving your fishing days?",
+      "button": "Create Free Account"
+    }
+  } 
+}
