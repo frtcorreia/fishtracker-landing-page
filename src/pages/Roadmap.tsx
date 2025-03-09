@@ -22,7 +22,6 @@ export function Roadmap() {
         { name: t("roadmap.features.socialFeatures"), done: false },
         { name: t("roadmap.features.advancedAnalytics"), done: false },
         { name: t("roadmap.features.mobileApp"), done: false },
-        { name: t("roadmap.features.tackleBoxManagement"), done: false },
       ],
     },
     {
@@ -31,8 +30,6 @@ export function Roadmap() {
       items: [
         { name: t("roadmap.features.aiFishRecognition"), done: false },
         { name: t("roadmap.features.tournamentIntegration"), done: false },
-        { name: t("roadmap.features.fishingSpotsMarketplace"), done: false },
-        { name: t("roadmap.features.proFeatures"), done: false },
       ],
     },
   ];
