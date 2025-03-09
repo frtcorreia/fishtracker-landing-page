@@ -96,7 +96,7 @@ export function LandingPage() {
               {t("landing.cta.subtitle")}
             </p>
             <Link
-              to="https://app.fishtracker/auth/signup"
+              to="https://app.fishtracker.pt/auth/signup"
               className="inline-flex items-center px-8 py-3 bg-white text-primary hover:bg-gray-100 rounded-lg transition-colors"
             >
               {t("landing.cta.button")}
