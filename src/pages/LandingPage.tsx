@@ -1,18 +1,8 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import {
-  Fish,
-  BarChart2,
-  Share2,
-  Cloud,
-  LogIn,
-  UserPlus,
-  MapPin,
-  Scale,
-} from "lucide-react";
-import { ThemeSwitcher } from "../components/ThemeSwitcher";
-import { LanguageSwitcher } from "../components/LanguageSwitcher";
+import { Fish, BarChart2, Share2, Cloud, MapPin, Scale } from "lucide-react";
+import Header from "../components/Header";
 
 export function LandingPage() {
   const { t } = useTranslation();
@@ -41,114 +31,85 @@ export function LandingPage() {
   ];
 
   return (
-    <div className="min-h-screen bg-gradient-to-br from-primary-dark via-primary-light to-secondary">
-      {/* Header */}
-      <header className="bg-white/90 backdrop-blur-sm border-b border-gray-200 dark:bg-gray-800/90 dark:border-gray-700 sticky top-0 z-50">
-        <div className="container mx-auto px-4">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center">
-              <Fish className="w-8 h-8 text-primary dark:text-white" />
-              <span className="ml-2 text-xl font-bold text-primary dark:text-white">
-                {t("appName")}
-              </span>
+    <div className="min-h-screen bg-white dark:bg-gray-900">
+      <Header />
+      <main className="pt-16">
+        {/* Hero Section */}
+        <div className="relative">
+          <div className="container mx-auto px-4 pt-24 pb-16">
+            <div className="max-w-4xl mx-auto text-center">
+              <h1 className="text-5xl font-bold text-white mb-6">
+                {t("landing.hero.title")}
+              </h1>
+              <p className="text-xl text-white/90 mb-8">
+                {t("landing.hero.subtitle")}
+              </p>
+              <div className="flex justify-center gap-4">
+                <Link
+                  to="https://app.fishtracker.pt/auth/signup"
+                  className="px-8 py-3 bg-white text-primary hover:bg-gray-100 rounded-lg transition-colors"
+                >
+                  {t("landing.hero.getStarted")}
+                </Link>
+                <Link
+                  to="https://app.fishtracker.pt/auth/signin"
+                  className="px-8 py-3 bg-primary-light hover:bg-primary text-white rounded-lg transition-colors"
+                >
+                  {t("landing.hero.signIn")}
+                </Link>
+              </div>
             </div>
-            <div className="flex items-center space-x-4">
-              <LanguageSwitcher />
-              <ThemeSwitcher />
-              <Link
-                to="https://app.fishtracker.pt/auth/signin"
-                className="inline-flex items-center px-4 py-2 text-primary hover:text-primary-light dark:text-white dark:hover:text-primary-light transition-colors"
-              >
-                <LogIn className="w-4 h-4 mr-2" />
-                {t("landing.hero.signIn")}
-              </Link>
-              <Link
-                to="https://app.fishtracker.pt/auth/signup"
-                className="inline-flex items-center px-4 py-2 bg-primary hover:bg-primary-light text-white rounded-lg transition-colors"
-              >
-                <UserPlus className="w-4 h-4 mr-2" />
-                {t("landing.hero.getStarted")}
-              </Link>
+          </div>
+
+          {/* Decorative Elements */}
+          <div className="absolute top-1/2 left-10 transform -translate-y-1/2 opacity-10">
+            <Fish className="w-48 h-48 text-white" />
+          </div>
+          <div className="absolute top-1/4 right-10 transform -translate-y-1/2 opacity-10">
+            <MapPin className="w-32 h-32 text-white" />
+          </div>
+          <div className="absolute bottom-10 left-1/4 opacity-10">
+            <Scale className="w-24 h-24 text-white" />
+          </div>
+        </div>
+
+        {/* Features Section */}
+        <div className="bg-white dark:bg-gray-800">
+          <div className="container mx-auto px-4 py-16">
+            <h2 className="text-3xl font-bold text-center text-primary dark:text-white mb-12">
+              {t("landing.features.title")}
+            </h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+              {features.map((feature, index) => (
+                <FeatureCard
+                  key={index}
+                  icon={feature.icon}
+                  title={t(feature.titleKey)}
+                  description={t(feature.descriptionKey)}
+                />
+              ))}
             </div>
           </div>
         </div>
-      </header>
 
-      {/* Hero Section */}
-      <div className="relative">
-        <div className="container mx-auto px-4 pt-24 pb-16">
-          <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl font-bold text-white mb-6">
-              {t("landing.hero.title")}
-            </h1>
-            <p className="text-xl text-white/90 mb-8">
-              {t("landing.hero.subtitle")}
+        {/* Call to Action */}
+        <div className="bg-gradient-to-br from-primary to-primary-light py-16">
+          <div className="container mx-auto px-4 text-center">
+            <h2 className="text-3xl font-bold text-white mb-6">
+              {t("landing.cta.title")}
+            </h2>
+            <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+              {t("landing.cta.subtitle")}
             </p>
-            <div className="flex justify-center gap-4">
-              <Link
-                to="https://app.fishtracker.pt/auth/signup"
-                className="px-8 py-3 bg-white text-primary hover:bg-gray-100 rounded-lg transition-colors"
-              >
-                {t("landing.hero.getStarted")}
-              </Link>
-              <Link
-                to="https://app.fishtracker.pt/auth/signin"
-                className="px-8 py-3 bg-primary-light hover:bg-primary text-white rounded-lg transition-colors"
-              >
-                {t("landing.hero.signIn")}
-              </Link>
-            </div>
+            <Link
+              to="https://app.fishtracker/auth/signup"
+              className="inline-flex items-center px-8 py-3 bg-white text-primary hover:bg-gray-100 rounded-lg transition-colors"
+            >
+              {t("landing.cta.button")}
+            </Link>
           </div>
         </div>
-
-        {/* Decorative Elements */}
-        <div className="absolute top-1/2 left-10 transform -translate-y-1/2 opacity-10">
-          <Fish className="w-48 h-48 text-white" />
-        </div>
-        <div className="absolute top-1/4 right-10 transform -translate-y-1/2 opacity-10">
-          <MapPin className="w-32 h-32 text-white" />
-        </div>
-        <div className="absolute bottom-10 left-1/4 opacity-10">
-          <Scale className="w-24 h-24 text-white" />
-        </div>
-      </div>
-
-      {/* Features Section */}
-      <div className="bg-white dark:bg-gray-800">
-        <div className="container mx-auto px-4 py-16">
-          <h2 className="text-3xl font-bold text-center text-primary dark:text-white mb-12">
-            {t("landing.features.title")}
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {features.map((feature, index) => (
-              <FeatureCard
-                key={index}
-                icon={feature.icon}
-                title={t(feature.titleKey)}
-                description={t(feature.descriptionKey)}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-
-      {/* Call to Action */}
-      <div className="bg-gradient-to-br from-primary to-primary-light py-16">
-        <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl font-bold text-white mb-6">
-            {t("landing.cta.title")}
-          </h2>
-          <p className="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
-            {t("landing.cta.subtitle")}
-          </p>
-          <Link
-            to="https://app.fishtracker/auth/signup"
-            className="inline-flex items-center px-8 py-3 bg-white text-primary hover:bg-gray-100 rounded-lg transition-colors"
-          >
-            {t("landing.cta.button")}
-          </Link>
-        </div>
-      </div>
+      </main>
     </div>
   );
 }

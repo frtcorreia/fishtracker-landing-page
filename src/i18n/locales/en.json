@@ -1,5 +1,39 @@
 {  
   "appName": "FishTracker",
+  "nav": {
+    "home": "Home",
+    "roadmap": "Roadmap"
+  },
+  "common": {
+    "login": "Login",
+    "register": "Register",
+    "logout": "Logout"
+  },
+  "roadmap": {
+    "welcome": "Welcome to Our Roadmap",
+    "description": "Discover what we're working on and what's planned for the future of FishTracker.",
+    "sections": {
+      "current": "Core Features",
+      "upcoming": "Coming Soon",
+      "planned": "Future Plans"
+    },
+    "features": {
+      "catchTracking": "Catch Tracking",
+      "weatherIntegration": "Weather Integration",
+      "locationMapping": "Location Mapping",
+      "basicAnalytics": "Basic Analytics",
+      "socialFeatures": "Social Features",
+      "advancedAnalytics": "Advanced Analytics",
+      "mobileApp": "Mobile App",
+      "tackleBoxManagement": "Tackle Box Management",
+      "aiFishRecognition": "AI Fish Recognition",
+      "tournamentIntegration": "Tournament Integration"
+    },
+    "whatNext": {
+      "title": "What's Next?",
+      "description": "We're always working to improve FishTracker. Stay tuned for updates and new features!"
+    }
+  },
   "landing": {
     "hero": {
       "title": "Track Your Fishing Adventures",

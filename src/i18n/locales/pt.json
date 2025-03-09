@@ -1,5 +1,39 @@
 { 
   "appName": "FishTracker",
+  "nav": {
+    "home": "Início",
+    "roadmap": "Roadmap"
+  },
+  "common": {
+    "login": "Entrar",
+    "register": "Registar",
+    "logout": "Sair"
+  },
+  "roadmap": {
+    "welcome": "Bem-vindo ao Nosso Roadmap",
+    "description": "Descubra o que estamos a desenvolver e o que está planeado para o futuro do FishTracker.",
+    "sections": {
+      "current": "Funcionalidades Atuais",
+      "upcoming": "Em Breve",
+      "planned": "Planos Futuros"
+    },
+    "features": {
+      "catchTracking": "Registo de Capturas",
+      "weatherIntegration": "Integração com Clima",
+      "locationMapping": "Mapeamento de Locais",
+      "basicAnalytics": "Análises Básicas",
+      "socialFeatures": "Funcionalidades Sociais",
+      "advancedAnalytics": "Análises Avançadas",
+      "mobileApp": "Aplicação Móvel",
+      "tackleBoxManagement": "Gestão de Equipamento",
+      "aiFishRecognition": "Reconhecimento de Peixes por IA",
+      "tournamentIntegration": "Integração de Torneios"
+    },
+    "whatNext": {
+      "title": "O Que Vem a Seguir?",
+      "description": "Estamos sempre a trabalhar para melhorar o FishTracker. Fique atento às atualizações e novas funcionalidades!"
+    }
+  },
   "landing": {
     "hero": {
       "title": "Registe as Suas Aventuras de Pesca",
